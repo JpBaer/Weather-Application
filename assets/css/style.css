@@ -1,0 +1,62 @@
+
+.headline{
+    text-align: center;
+    background-color: rgb(0, 0, 117);
+    color: white;
+    padding: 5px;
+}
+
+#city-search{
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 15px;
+}
+
+.weather-display{
+    padding-top: 30px;
+    padding-left: 50px;
+}
+
+.city-display{
+    display: flex;
+    flex-direction: column;
+    border: black solid 1px;
+    padding: 10px;
+}
+
+.weekly-forecast{
+    display:flex;
+    flex-direction: row;
+}
+
+.weather-block{
+    background-color: rgb(63, 115, 157);
+    color:white;
+    height: 220px;
+    width: 200px;
+    margin-right:30px;
+    margin-top: 30px;
+    padding:10px;
+}
+
+.city-btn{
+    background-color: rgb(75, 75, 75);
+    color: white;
+    border: none;
+    margin:5px;
+ 
+}
+
+.city-input{
+    margin:5px;
+    
+}
+
+.search-btn{
+    background-color: blue;
+    color: white;
+    border: none;
+    margin:5px;
+
+}
