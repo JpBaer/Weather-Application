@@ -1,7 +1,49 @@
+.hero{
+
+    min-height:100vh;
+    width:100vw;
+}
+.sunny-hero{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.372)), url('/Projects/Weather-Application/assets/images/pexels-pixabay-33044.jpg');
+    background-position: center;
+}
+    
+
+.rainy-hero{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.372)), url('/Projects/Weather-Application/assets/images/pexels-pixabay-459451.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.cloudy-hero{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.372)), url('/Projects/Weather-Application/assets/images/pexels-alex-conchillos-3888585.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.stormy-hero{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.372)), url('/Projects/Weather-Application/assets/images/pexels-pixabay-99577.jpg');
+    background-size: cover;
+    background-position: center;
+} 
+
+.mist-hero{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.372)), url('/Projects/Weather-Application/assets/images/pexels-eberhard-grossgasteiger-1292115.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.snow-hero{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.372)), url('/Projects/Weather-Application/assets/images/pexels-nadine-wuchenauer-1726779.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+*{
+    color:white;
+    font-family: 'Lato', sans-serif;
+}
 
 .headline{
     text-align: center;
-    background-color: rgb(0, 0, 117);
     color: white;
     padding: 5px;
 }
@@ -9,20 +51,24 @@
 #city-search{
     display: flex;
     flex-direction: column;
-
+    text-align: center;
+    font-weight: 100;
     padding-top: 15px;
 }
 
 .weather-display{
-    padding-top: 30px;
+    padding-top: 100px;
     padding-left: 50px;
 }
 
 .city-display{
     display: flex;
     flex-direction: column;
-    border: black solid 1px;
+    border: rgb(255, 255, 255) solid 1px;
+    background-color: rgba(128, 128, 128, 0.5);
+    border-radius: 5px;
     padding: 10px;
+    margin-right: 30px;
 }
 
 .weekly-forecast{
@@ -30,33 +76,52 @@
     flex-direction: row;
 }
 
+i{
+    padding-bottom: 10px;
+}
+
 .weather-block{
-    background-color: rgb(63, 115, 157);
+    /* flex:1 1; */
+    border: rgb(255, 255, 255) solid 1px;
+    background-color: rgba(128, 128, 128, 0.5);
+    border-radius: 5px;
     color:white;
     height: 220px;
     width: 200px;
     margin-right:30px;
     margin-top: 30px;
     padding:10px;
+    /* display:flex;
+    justify-content: center;
+    flex-direction: row; */
 }
 
 .city-btn{
-    background-color: rgb(75, 75, 75);
+    background-color: rgba(75, 75, 75, 0.556);
     color: white;
-    border: none;
+    border: white solid 1px;
     margin:5px;
- 
+}
+.city-btn:hover{
+    background-color: rgb(34, 34, 34);
+    border: white solid 1px;
 }
 
 .city-input{
     margin:5px;
+    color: rgb(75, 75, 75);
     
 }
 
 .search-btn{
-    background-color: blue;
+    background-color: rgba(0, 0, 255, 0);
     color: white;
-    border: none;
+    border: white solid 1px;
     margin:5px;
 
+}
+
+.search-btn:hover{
+    background-color: rgb(75, 75, 75);
+    border: white solid 1px;
 }

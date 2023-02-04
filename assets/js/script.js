@@ -19,6 +19,7 @@ var cityNameEl = $('#city-name');
 var currentTempEl = $('#current-temp');
 var currentHumdiditiyEl = $('#current-humidity')
 var currentWindEl = $('#current-wind')
+var hero = $('.hero');
 console.log(currentDay); 
 //convert city to lon and latitude
 //need to pull cityName from button data or search
@@ -56,15 +57,17 @@ function convertLonLat(cityName){
 function handleSearchButton(event){
     event.preventDefault();
     localStorage.clear();
+    console.log('-----This-----')
+    console.log(this);
+    console.log(searchButtonEl[0])
     //If search button is selected pull city name from input box
     //Else pull from button data
-    if($(this)  == searchButtonEl){
+    if(this  == searchButtonEl[0]){
        var cityName = citySearchEl.val().trim(); 
        console.log(cityName);
        localStorage.setItem('cityName',cityName);
     }
     else{
-      console.log(this);
        var cityName =  $(this).attr('data-place'); 
        console.log(cityName);
        localStorage.setItem('cityName',cityName);
@@ -107,13 +110,16 @@ function getForecast(coordinates){
         var weatherType = futureForecast[i].weather[0].main;
 
         if(weatherType == 'Rain'){
-          blockIcon.addClass = "fa-solid fa-cloud-showers"
+          $(blockIcon).addClass("fas fa-cloud-showers-heavy fa-2x")
         }
-        else if(weatherType == 'Clouds'){
-          blockIcon.textContent = 'Clouds'
+        else if(weatherType == 'Clouds'|| weatherType == 'Mist'){
+          $(blockIcon).addClass('fas fa-cloud fa-2x')
         }
         else if(weatherType == 'Clear'){
-          blockIcon.textContent = 'Sunny'
+         $(blockIcon).addClass('fas fa-sun fa-2x')
+        }
+        else if(weatherType == 'Snow'){
+         $(blockIcon).addClass('far fa-snowflake fa-2x')
         }
 
         console.log(weatherType);
@@ -168,6 +174,51 @@ function getForecast(coordinates){
       currentTempEl.text(currentTemp + ' ' + String.fromCharCode(176) + 'F');
       currentHumdiditiyEl.text(currentHumidity + ' %');
       currentWindEl.text(currentWind + ' MPH');
+
+      var weatherType = data.weather[0].main;
+
+        if(weatherType == 'Rain'){
+          $(hero).addClass("rainy-hero");
+          $(hero).removeClass("stormy-hero");
+          $(hero).removeClass("sunny-hero");
+          $(hero).removeClass("cloudy-hero")
+          $(hero).removeClass("mist-hero");
+          $(hero).removeClass("snow-hero");
+          
+        }
+        else if(weatherType == 'Clouds'){
+          $(hero).addClass('cloudy-hero');
+          $(hero).removeClass("stormy-hero");
+          $(hero).removeClass("sunny-hero");
+          $(hero).removeClass("rainy-hero");
+          $(hero).removeClass("mist-hero");
+          $(hero).removeClass("snow-hero");
+        }
+        else if(weatherType == 'Clear'){
+         $(hero).addClass('sunny-hero');
+         $(hero).removeClass("stormy-hero");
+          $(hero).removeClass("rainy-hero");
+          $(hero).removeClass("cloudy-hero");
+          $(hero).removeClass("mist-hero");
+          $(hero).removeClass("snow-hero");
+        }
+        else if(weatherType == 'Mist'){
+          $(hero).addClass('mist-hero');
+          $(hero).removeClass("stormy-hero");
+          $(hero).removeClass("rainy-hero");
+          $(hero).removeClass("cloudy-hero");
+          $(hero).removeClass("sunny-hero");
+          $(hero).removeClass("snow-hero");
+        }
+
+        else if(weatherType == 'Snow'){
+          $(hero).addClass('snow-hero');
+          $(hero).removeClass("stormy-hero");
+          $(hero).removeClass("rainy-hero");
+          $(hero).removeClass("cloudy-hero");
+          $(hero).removeClass("sunny-hero");
+          $(hero).removeClass("mist-hero");
+        }
 
       // var currentWeather = {cityName: cityName,
       //    currentTemp: currentTemp,
