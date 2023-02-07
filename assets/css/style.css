@@ -2,45 +2,56 @@
 
     min-height:100vh;
     width:100vw;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.741),rgba(0, 0, 0, 0.139)), url('/Projects/Weather-Application/assets/images/pexels-martin-péchy-304664.jpg');
+    background-position: center;
 }
 .sunny-hero{
-    background-image:linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.372)), url('/Projects/Weather-Application/assets/images/pexels-pixabay-33044.jpg');
+    background-image:linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.55)), url('/Weather-Application/assets/images/pexels-pixabay-33044.jpg');
     background-position: center;
 }
     
 
 .rainy-hero{
-    background-image:linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.372)), url('/Projects/Weather-Application/assets/images/pexels-pixabay-459451.jpg');
+    background-image:linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.55)), url('/Weather-Application/assets/images/pexels-pixabay-459451.jpg');
     background-size: cover;
     background-position: center;
 }
 .cloudy-hero{
-    background-image:linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.372)), url('/Projects/Weather-Application/assets/images/pexels-alex-conchillos-3888585.jpg');
+    background-image:linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.55)), url('/Weather-Application/assets/images/pexels-alex-conchillos-3888585.jpg');
     background-size: cover;
     background-position: center;
 }
 .stormy-hero{
-    background-image:linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.372)), url('/Projects/Weather-Application/assets/images/pexels-pixabay-99577.jpg');
+    background-image:linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.55)), url('/Weather-Application/assets/images/pexels-pixabay-99577.jpg');
     background-size: cover;
     background-position: center;
 } 
 
 .mist-hero{
-    background-image:linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.372)), url('/Projects/Weather-Application/assets/images/pexels-eberhard-grossgasteiger-1292115.jpg');
+    background-image:linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.55)), url('/Weather-Application/assets/images/pexels-eberhard-grossgasteiger-1292115.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .snow-hero{
-    background-image:linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.372)), url('/Projects/Weather-Application/assets/images/pexels-nadine-wuchenauer-1726779.jpg');
+    background-image:linear-gradient(rgba(0, 0, 0, 0.55),rgba(0, 0, 0, 0.55)), url('/Weather-Application/assets/images/pexels-nadine-wuchenauer-1726779.jpg');
     background-size: cover;
     background-position: center;
 }
 
 *{
     color:white;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
 }
+
+
+h1,button{
+ font-family: 'Lato', sans-serif;
+}
+.lato{
+font-family: 'Lato', sans-serif;
+}
+
 
 .headline{
     text-align: center;
@@ -64,7 +75,9 @@
 .city-display{
     display: flex;
     flex-direction: column;
-    border: rgb(255, 255, 255) solid 1px;
+    border: rgba(255, 255, 255, 0.45) solid 1px;
+    
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.454);
     background-color: rgba(128, 128, 128, 0.5);
     border-radius: 5px;
     padding: 10px;
@@ -82,8 +95,8 @@ i{
 
 .weather-block{
     /* flex:1 1; */
-    border: rgb(255, 255, 255) solid 1px;
-    background-color: rgba(128, 128, 128, 0.5);
+    border: rgba(238, 238, 238, 0.507) solid 1px;
+    background-color: rgba(128, 128, 128, 0.279);
     border-radius: 5px;
     color:white;
     height: 220px;
@@ -91,6 +104,8 @@ i{
     margin-right:30px;
     margin-top: 30px;
     padding:10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.298)
+    ;
     /* display:flex;
     justify-content: center;
     flex-direction: row; */

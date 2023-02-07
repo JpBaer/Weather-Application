@@ -19,7 +19,7 @@ var cityNameEl = $('#city-name');
 var currentTempEl = $('#current-temp');
 var currentHumdiditiyEl = $('#current-humidity')
 var currentWindEl = $('#current-wind')
-var hero = $('.hero');
+var hero = $('.city-display');
 console.log(currentDay); 
 //convert city to lon and latitude
 //need to pull cityName from button data or search
@@ -49,8 +49,11 @@ function convertLonLat(cityName){
        //console.log(coordinates);
       //  console.log(coordinates)
       //  return coordinates
-
+      
     }) 
+    .catch((error) => {
+      alert('Error:'+ error)
+    })
   }
 
 
@@ -143,6 +146,9 @@ function getForecast(coordinates){
 
         
       }
+    })
+    .catch((error) => {
+      alert('Error:'+ error)
     })
   }
 
