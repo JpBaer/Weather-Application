@@ -35,7 +35,7 @@ else{
 }
 
 function convertLonLat(cityName){
-    var geocodeURL = "http://api.openweathermap.org/geo/1.0/direct?q="+cityName+"&limit=5&appid="+APIkey;
+    var geocodeURL = "https://api.openweathermap.org/geo/1.0/direct?q="+cityName+"&limit=5&appid="+APIkey;
     fetch(geocodeURL)
     .then(function (response) {
       return response.json();
